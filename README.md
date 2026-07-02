@@ -223,5 +223,8 @@ Header:
 ```
 Authorization: Bearer TU_TOKEN
 ```
+## 🥷 JDM 
 
+Proyecto mini completo para uso personal espero lo disfruten 
+ATT: JDM
 
