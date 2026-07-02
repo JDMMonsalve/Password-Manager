@@ -224,13 +224,4 @@ Header:
 Authorization: Bearer TU_TOKEN
 ```
 
----
 
-## ⚠️ Notas
-
-* No subir `.env` al repositorio
-* Este backend depende de un frontend que realice el cifrado
-* Proyecto enfocado en seguridad y buenas prácticas
-* No subir carpeta `node_modules` ni `basededatos.db`
-
----
