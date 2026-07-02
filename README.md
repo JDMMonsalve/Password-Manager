@@ -90,16 +90,15 @@ docker-compose up --build
 
 **Opción B — Imagen ya empaquetada (GHCR):**
 
-Primero clona el repo para tener la carpeta `backend/` con el `.env` que configuraste:
-
 ```bash
 git clone https://github.com/JDMMonsalve/Password-Manager
 cd Password-Manager
+# Crea tu .env (o copia el que tengas) en la raíz del proyecto
 docker pull ghcr.io/jdmmonsalve/password-manager:latest
-docker run -p 3000:3000 --env-file backend/.env ghcr.io/jdmmonsalve/password-manager
+docker run -p 3000:3000 --env-file .env ghcr.io/jdmmonsalve/password-manager
 ```
 
-> ⚠️ El `--env-file` usa una ruta **desde donde ejecutas el comando**. Debes estar dentro del proyecto o pasar la ruta absoluta. Sin el `.env` la imagen no podrá iniciar.
+> ⚠️ El `.env` debe estar en la raíz del proyecto. Sin él la imagen no podrá iniciar.
 
 Salida esperada:
 
@@ -114,7 +113,8 @@ Salida esperada:
 
 | Método | Ruta               | Descripción            | Auth |
 | ------ | ------------------ | ---------------------- | ---- |
-| GET    | /                  | Estado del servidor    | ❌    |
+| GET    | /                  | Frontend (index.html)  | ❌    |
+| GET    | /api/health        | Estado del servidor    | ❌    |
 | POST   | /api/auth/register | Registro               | ❌    |
 | POST   | /api/auth/login    | Login (JWT)            | ❌    |
 | GET    | /api/vault         | Obtener datos cifrados | ✅    |

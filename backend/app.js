@@ -30,8 +30,8 @@ app.use(express.json());
 
 // ── Rutas ─────────────────────────────────
 
-// Ruta de salud — para verificar que el servidor está vivo
-app.get('/', (req, res) => {
+// Ruta de salud de la API
+app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', mensaje: 'Vault Seguro API corriendo ✅' });
 });
 
