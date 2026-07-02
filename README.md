@@ -95,6 +95,8 @@ docker pull ghcr.io/jdmmonsalve/password-manager:latest
 docker run -p 3000:3000 --env-file backend/.env ghcr.io/jdmmonsalve/password-manager
 ```
 
+> ⚠️ El archivo `.env` debe estar en la carpeta `backend/.env`. Sin él la imagen no podrá iniciar correctamente. Es el mismo que configuraste en el paso 4.
+
 Salida esperada:
 
 ```
