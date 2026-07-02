@@ -15,6 +15,10 @@ const app = express();
 
 // ── Middleware global ──────────────────────
 
+// Sirve el frontend (index.html, script.js, styles.css) como estático
+const path = require('path');
+app.use(express.static(path.join(__dirname, '..')));
+
 // Permite que el frontend (en otro origen) se comunique con esta API
 app.use(cors({
   origin: '*', // En producción cambia esto a tu dominio real

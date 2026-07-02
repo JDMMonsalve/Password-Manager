@@ -10,6 +10,9 @@ backend/.env
 *.db
 backend/vault.db
 
+# Datos locales (SQLite con Docker)
+data/
+
 # Archivos del sistema
 .DS_Store
 Thumbs.db

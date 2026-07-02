@@ -80,6 +80,21 @@ Modo desarrollo:
 npm run dev
 ```
 
+### 6. (Alternativa) Usar Docker
+
+**Opción A — Build local:**
+
+```bash
+docker-compose up --build
+```
+
+**Opción B — Imagen ya empaquetada (GHCR):**
+
+```bash
+docker pull ghcr.io/jdmmonsalve/password-manager:latest
+docker run -p 3000:3000 --env-file backend/.env ghcr.io/jdmmonsalve/password-manager
+```
+
 Salida esperada:
 
 ```
@@ -128,8 +143,13 @@ Password Manager
 ├──index.html
 ├──script.js
 ├──styles.css
+├──Dockerfile
+├──docker-compose.yml
 ├──README.md
 ├──.gitignore
+│
+├──.github/workflows/
+│   └── docker-publish.yml
 │
 ├──backend/
    ├── server.js
