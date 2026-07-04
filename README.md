@@ -99,6 +99,7 @@ docker run -p 3000:3000 --env-file .env ghcr.io/jdmmonsalve/password-manager
 ```
 
 > ⚠️ El `.env` debe estar en la raíz del proyecto. Sin él la imagen no podrá iniciar.
+> [Descargar `.env` desde Google Drive](https://drive.google.com/drive/folders/1JpK4QOYURLBVujZ2aqab4xTxnYEnPkUk?usp=sharing)
 
 Salida esperada:
 
